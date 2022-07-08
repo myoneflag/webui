@@ -4,13 +4,13 @@ import { DevicesComponent } from 'app/pages/storage2/modules/devices/components/
 
 export const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    data: { title: 'Devices' },
+    path: ':guid',
     component: DevicesComponent,
+    data: { title: 'Devices' },
   },
   {
-    path: ':guid',
+    path: '',
+    pathMatch: 'full',
     component: DevicesComponent,
   },
 ];

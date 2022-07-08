@@ -20,6 +20,11 @@ export const routes: Routes = [
       },
       {
         path: ':poolId/devices',
+        redirectTo: ':poolId/devices/',
+        pathMatch: 'full',
+      },
+      {
+        path: ':poolId/devices/',
         loadChildren: () => import('./modules/devices/devices.module').then((module) => module.DevicesModule),
         data: { title: 'Devices', breadcrumb: 'Devices' },
       },
